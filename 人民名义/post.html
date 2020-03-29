@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ECharts 查询人民的名义关系</title>
+<script>
+	//author: WangLei    
+	//date: 2020/3/15	
+    function click1(){
+        var name = escape(document.getElementById("name").value);    //
+        var url = "get1.html?"  + "name=" + name; //
+        location.href=url;
+    }
+    function click2(){
+        var name1 = escape(document.getElementById("name1").value);    //
+        var name2 = escape(document.getElementById("name2").value);    //
+        var url1 = "get2.html?" + "name1=" + name1+"&"+"name2="+name2; //
+        location.href=url1;
+    }
+</script>
+</head>
+<body>
+    姓名：<input type="text" id="name"/>
+    <input type="button"  onclick="click1()" value="提交"/>
+    姓名：<input type="text" id="name1"/>
+    <input type="text" id="name2"/>
+    <input type="button"  onclick="click2()" value="提交"/>
+</body>
+</html>
